@@ -279,12 +279,10 @@
             <a href="#register">Register</a>
         </nav>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script>
-   
-
        const anchor = document.querySelectorAll('a');
-
+        
         Array
             .from(anchor)
             .forEach(element => element.addEventListener('click', function(event) {
@@ -292,7 +290,7 @@
                 if (this.hash !== "") {
                      event.preventDefault();
                 const hash = this.hash;
-                    let elementOffsetTop = document.querySelector(hash).offsetTop
+                    let elementOffsetTop = document.querySelector(hash).offsetTop;
                     window.scroll({ top: elementOffsetTop, left: 0, behavior: 'smooth' });
                 }
             }))
